@@ -89,16 +89,7 @@ const FarmerDashboard = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background relative">
-      {/* Floating leaf ambient background */}
-      <div className="ambient-leaves">
-        <div className="leaf-shape"></div>
-        <div className="leaf-shape"></div>
-        <div className="leaf-shape"></div>
-        <div className="leaf-shape"></div>
-        <div className="leaf-shape"></div>
-      </div>
-
+    <>
       {/* Header */}
       <header className="sticky top-0 z-50 glass-subtle border-b border-border/50 backdrop-blur-xl">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -225,7 +216,7 @@ const FarmerDashboard = () => {
           </CardContent>
         </Card>
       </main>
-    </div>
+    </>
   );
 };
 

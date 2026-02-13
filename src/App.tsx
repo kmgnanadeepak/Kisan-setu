@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SplashScreen } from "@/components/SplashScreen";
+import { Layout } from "@/components/Layout";
 import { useTheme } from "@/hooks/useTheme";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
@@ -63,33 +64,33 @@ const AppContent = () => {
           <Route path="/auth" element={<Auth />} />
           
           {/* Farmer Routes */}
-          <Route path="/farmer" element={<FarmerDashboard />} />
-          <Route path="/farmer/disease-detection" element={<DiseaseDetection />} />
-          <Route path="/farmer/disease-result" element={<DiseaseResult />} />
-          <Route path="/farmer/shop" element={<Shop />} />
-          <Route path="/farmer/orders" element={<FarmerOrders />} />
-          <Route path="/farmer/profile" element={<FarmerProfile />} />
-          <Route path="/farmer/marketplace" element={<Marketplace />} />
-          <Route path="/farmer/nearby-shops" element={<NearbyShops />} />
-          <Route path="/farmer/calendar" element={<FarmerCalendar />} />
-          <Route path="/farmer/customer-orders" element={<FarmerCustomerOrders />} />
+          <Route path="/farmer" element={<Layout><FarmerDashboard /></Layout>} />
+          <Route path="/farmer/disease-detection" element={<Layout><DiseaseDetection /></Layout>} />
+          <Route path="/farmer/disease-result" element={<Layout><DiseaseResult /></Layout>} />
+          <Route path="/farmer/shop" element={<Layout><Shop /></Layout>} />
+          <Route path="/farmer/orders" element={<Layout><FarmerOrders /></Layout>} />
+          <Route path="/farmer/profile" element={<Layout><FarmerProfile /></Layout>} />
+          <Route path="/farmer/marketplace" element={<Layout><Marketplace /></Layout>} />
+          <Route path="/farmer/nearby-shops" element={<Layout><NearbyShops /></Layout>} />
+          <Route path="/farmer/calendar" element={<Layout><FarmerCalendar /></Layout>} />
+          <Route path="/farmer/customer-orders" element={<Layout><FarmerCustomerOrders /></Layout>} />
           
           {/* Merchant Routes */}
-          <Route path="/merchant" element={<MerchantDashboard />} />
-          <Route path="/merchant/stock" element={<MerchantStock />} />
-          <Route path="/merchant/orders" element={<MerchantOrders />} />
-          <Route path="/merchant/profile" element={<MerchantProfile />} />
+          <Route path="/merchant" element={<Layout><MerchantDashboard /></Layout>} />
+          <Route path="/merchant/stock" element={<Layout><MerchantStock /></Layout>} />
+          <Route path="/merchant/orders" element={<Layout><MerchantOrders /></Layout>} />
+          <Route path="/merchant/profile" element={<Layout><MerchantProfile /></Layout>} />
           
           {/* Customer Routes */}
-          <Route path="/customer" element={<CustomerDashboard />} />
-          <Route path="/customer/marketplace" element={<CustomerMarketplace />} />
-          <Route path="/customer/cart" element={<CustomerCart />} />
-          <Route path="/customer/checkout" element={<CustomerCheckout />} />
-          <Route path="/customer/orders" element={<CustomerOrders />} />
-          <Route path="/customer/wishlist" element={<CustomerWishlist />} />
-          <Route path="/customer/profile" element={<CustomerProfile />} />
-          <Route path="/customer/farmer/:farmerId" element={<FarmerProfileView />} />
-          <Route path="/customer/compare" element={<PriceComparison />} />
+          <Route path="/customer" element={<Layout><CustomerDashboard /></Layout>} />
+          <Route path="/customer/marketplace" element={<Layout><CustomerMarketplace /></Layout>} />
+          <Route path="/customer/cart" element={<Layout><CustomerCart /></Layout>} />
+          <Route path="/customer/checkout" element={<Layout><CustomerCheckout /></Layout>} />
+          <Route path="/customer/orders" element={<Layout><CustomerOrders /></Layout>} />
+          <Route path="/customer/wishlist" element={<Layout><CustomerWishlist /></Layout>} />
+          <Route path="/customer/profile" element={<Layout><CustomerProfile /></Layout>} />
+          <Route path="/customer/farmer/:farmerId" element={<Layout><FarmerProfileView /></Layout>} />
+          <Route path="/customer/compare" element={<Layout><PriceComparison /></Layout>} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>
